@@ -1,0 +1,142 @@
+/* As hex codes */
+
+.color-primary-0 { color: #88B052 }	/* Main Primary color */
+.color-primary-1 { color: #D7EEB8 }
+.color-primary-2 { color: #B3D585 }
+.color-primary-3 { color: #68912F }
+.color-primary-4 { color: #446911 }
+
+.main {
+  /* border: 1px solid red; */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  /* border: 2px solid orange; */
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
+  cursor: default;
+  border-bottom: 1px solid #446911;
+  margin: 0 5px;
+}
+
+.header-logo {
+  width: 55px;
+  /* border: 2px dotted brown; */
+  /* border-radius: 50px; */
+  overflow: hidden;
+}
+
+.header-title {
+  /* border: 2px dotted rgb(42, 165, 159); */
+  font-size: 2.5em;
+  flex: 1;
+  margin: 0 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.header-title p {
+  text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #88B052;
+}
+
+.header-menu {
+  width: 50px;
+  /* border: 2px dotted brown; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .3s;
+  cursor: pointer;
+  color: #88B052;
+  font-size: 1.3em;
+}
+
+.header-menu:hover {
+  font-size: 1.6em;
+}
+
+.header-menu:active {
+  color: #446911;
+}
+
+.body {
+  /* border: 2px solid #446911; */
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+.sidebar {
+  /* border: 2px solid rgb(58, 58, 250); */
+  width: 23px;
+  overflow: auto;
+  transition: .3s;
+  margin: 5px;
+  padding-right: 5px;
+  border-right: 1px solid #446911;
+  /* width: 200px; */
+}
+
+.sidebar:hover {
+  width: 200px;
+}
+
+.content {
+  /* border: 2px solid lightblue; */
+  flex: 1;
+  overflow: auto;
+}
+
+.sidebar-menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu li {
+  padding: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  color: #446911;
+  border-radius: 5px;
+}
+
+.sidebar:hover li {
+  white-space: inherit;
+}
+
+.sidebar-menu li:hover {
+  /* color: #68912F; */
+  background: #D7EEB8;
+}
+
+.sidebar-menu .active {
+  background-color: #B3D585;
+}
+
+@media (max-width: 500px) {
+  .header-logo {
+    display: none;
+  }
+
+  .header-title {
+    font-size: 1.5em;
+  }
+}
