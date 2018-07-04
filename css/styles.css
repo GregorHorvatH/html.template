@@ -15,11 +15,12 @@
   left: 0;
   display: flex;
   flex-direction: column;
+  font-family: 'Roboto', serif;
 }
 
 .header {
   /* border: 2px solid orange; */
-  height: 60px;
+  height: 40px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -30,7 +31,7 @@
 }
 
 .header-logo {
-  width: 55px;
+  height: 40px;
   /* border: 2px dotted brown; */
   /* border-radius: 50px; */
   overflow: hidden;
@@ -38,7 +39,7 @@
 
 .header-title {
   /* border: 2px dotted rgb(42, 165, 159); */
-  font-size: 2.5em;
+  font-size: 2em;
   flex: 1;
   margin: 0 5px;
   display: flex;
@@ -64,11 +65,55 @@
   transition: .3s;
   cursor: pointer;
   color: #88B052;
-  font-size: 1.3em;
+  font-size: 1.7em;
+}
+
+.header-menu-list {
+  display: none;
+  position: absolute;
+  right: 6px;
+  top: 43px;
+  font-size: 0.5em;
+  background-color: #fff;
+  border: 1px solid #446911;
+  border-radius: 3px;
+  list-style-type: none;
+  padding: 5px;
+  margin: 0;
+}
+
+.header-menu-list .item {
+  font-size: 0.4em;
+  padding-right: 5px;
+}
+
+.header-menu-list li {
+  padding: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  color: #446911;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1.2em;
+}
+
+.header-menu-list li:hover {
+  background: #D7EEB8;
+}
+
+.header-menu-list li:active {
+  background: #88B052;
 }
 
 .header-menu:hover {
-  font-size: 1.6em;
+  /* font-size: 2em; */
+}
+
+.header-menu:hover .header-menu-list {
+  display: block;
 }
 
 .header-menu:active {
@@ -125,6 +170,11 @@
 .sidebar-menu li:hover {
   /* color: #68912F; */
   background: #D7EEB8;
+}
+
+.sidebar-menu li:active {
+  /* color: #68912F; */
+  background: #88B052;
 }
 
 .sidebar-menu .active {
